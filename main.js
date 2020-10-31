@@ -30,7 +30,7 @@ app.post("/todos", async (req, res) => {
       [description] // The $1
     );
 
-    res.json(newTodo);
+    res.json(req.body);
   } catch(err) {
     console.error(err.message);
   }
