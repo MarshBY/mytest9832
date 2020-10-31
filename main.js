@@ -8,6 +8,10 @@ app.use(cors());
 app.use(express.json());
 //IDK WHAT THIS IS
 //Routes
+app.get("/", (req, res) => {
+  res.send("Hello Heroku");
+})
+
 app.get("/todos", async (req, res) => {
   try {
     const todos = await pool.query("SELECT * FROM todo");
